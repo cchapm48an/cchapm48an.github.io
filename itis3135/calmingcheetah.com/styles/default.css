@@ -6,3 +6,6 @@ a:hover{
     color: black;
     text-decoration: line;
 }
+.links a{
+    color: orangered;
+}
