@@ -1,0 +1,45 @@
+body{
+    background-color: darkslategray;
+    text-align: center;
+    color: whitesmoke;
+    font-family: monospace;
+}
+
+
+a{
+    color: cornsilk;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color:red;
+    text-decoration: line;
+}
+
+
+main{
+    text-decoration: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+h2{
+    text-align: center;
+}
+
+
+img{
+    width: 60%;
+}
+
+
+figure{
+    font-style: italic;
+}
+
+
+li{
+    text-align: left;
+}
