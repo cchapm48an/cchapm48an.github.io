@@ -1,42 +1,61 @@
-body {
+body{
     background-color: darkslategray;
     text-align: center;
     color: whitesmoke;
     font-family: monospace;
 }
 
-a {
+
+a{
     color: cornsilk;
     text-decoration: none;
 }
 
-a:hover {
-    color: red;
+
+a:hover{
+    color:red;
     text-decoration: line;
 }
 
-main {
-    text-align: left;
+
+main{
+    text-decoration: left;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-h2 {
+
+h2{
     text-align: center;
 }
 
-img {
+img{
     width: 60%;
 }
 
-figure {
+
+figure{
     font-style: italic;
 }
 
-li {
+
+li{
     text-align: left;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: lightgray;
+    margin: 20px 0;
+}
+
+/* First letter styling */
+.highlight::first-letter {
+    color: cornsilk; 
+    font-size: 1.5em;
+    font-weight: bold;
+}
 hr {
     border: none;
     height: 2px;
