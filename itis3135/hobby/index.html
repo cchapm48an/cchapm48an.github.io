@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting Passion</title>
+    <link rel="icon" type="image/png" href="images/hobby_favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F1E7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #D35400;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        img {
+        max-width: 100%;
+        height: auto;
+        }
+        #home img {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        }
+        figure {
+            margin: 20px auto;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+        footer a {
+            color: #1ABC9C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2C3E50;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #1ABC9C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Painting Passion</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('best-times')">Best Times</a>
+        <a onclick="showSection('best-locations')">Best Locations</a>
+        <a onclick="showSection('how')">How</a>
+        <a onclick="showSection('why')">Why</a>
+        <a onclick="showSection('ai-prompts')">AI Prompts</a>
+    </nav>    
+
+    <main>
+        <section id="home" class="active">
+            <h2>Home - What is Painting?</h2>
+            <p>Painting is a creative expression where artists use pigments on surfaces to convey emotions, stories, and ideas. It is one of the oldest forms of art and remains an essential means of communication and creativity. From ancient cave paintings to modern digital art, painting has continually evolved, allowing artists to reflect their thoughts and experiences through color, form, and texture. The act of painting can be deeply personal, offering a form of meditation and self-discovery. Every brush stroke carries intention and meaning, making each piece of art unique.</p>
+            <figure>
+                <img src="images/IMG_4521 (1).jpg" alt="Abstract Painting" width="300">
+                <figcaption>An abstract painting showcasing bold colors and strokes.</figcaption>
+            </figure>
+        </section>
+
+        <section id="about">
+            <h2>Who - About Me</h2>
+            <p>I have been passionate about painting for years, exploring different styles and techniques. The process of creating art allows me to express my thoughts and emotions in a way that words often can't capture. From abstract pieces to detailed landscapes, painting has become a central part of my life and a way to share my perspective with the world. Art has helped me navigate life’s challenges and has been a source of comfort and inspiration. Painting gives me a sense of purpose and creative freedom.</p>
+            <figure>
+                <img src="images/my_painting.jpg" alt="My Painting" width="300">
+                <figcaption>A painting I created, inspired by nature.</figcaption>
+            </figure>
+        </section>
+
+        <section id="best-times">
+            <h2>When - Best Times to Paint</h2>
+            <p>Painting is best done in natural daylight, which helps in color accuracy and blending. The soft glow of early morning or the golden hour of sunset creates a warm and natural light that enhances the colors on the canvas. Nighttime painting can also be inspiring, especially when working under soft, dim lighting with calming music in the background. The mood and atmosphere of the time of day often influence the tone and style of the painting. Finding the right time to paint helps unlock creative energy and focus.</p>
+            <figure>
+                <img src="images/daylight.jpg" alt="Sunlit Studio" width="300">
+                <figcaption>A bright studio space ideal for painting.</figcaption>
+            </figure>
+        </section>
+
+        <section id="best-locations">
+            <h2>Where - Best Locations for Painting</h2>
+            <p>Outdoor landscapes, cozy studios, and art cafes provide great inspiration for painters. Being surrounded by nature or a creative atmosphere often sparks new ideas and helps with creative flow. Traveling to new places and sketching or painting on location can also lead to creative breakthroughs. The setting plays a key role in the mood and outcome of the artwork. A peaceful and inspiring environment enhances the creative process and allows for artistic exploration.</p>
+            <figure>
+                <img src="images/art_studio.jpg" alt="Art Studio" width="300">
+                <figcaption>A cozy art studio with plenty of natural light.</figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How - Painting Techniques</h2>
+            <p>Techniques like blending, glazing, and stippling help create depth and texture in paintings. Each technique requires practice and experimentation to master. Using different brushes, palette knives, and sponges allows for unique textures and visual effects. Layering and mixing colors adds dimension and vibrancy to the artwork. Mastering these techniques enables artists to create a personal and distinctive style.</p>
+            <figure>
+                <img src="images/brush_technique.jpg" alt="Brush Technique" width="300">
+                <figcaption>Using different brush techniques for texture.</figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why - The Joy of Painting</h2>
+            <p>Painting is a form of self-expression, relaxation, and a way to bring ideas to life. It helps clear the mind and provides a sense of accomplishment. The act of mixing colors, applying brush strokes, and watching a piece come together is deeply satisfying and rewarding. Art allows for emotional release and storytelling. The creative process fosters confidence and a deeper understanding of oneself.</p>
+            <figure>
+                <img src="images/color_palette.jpg" alt="Color Palette" width="300">
+                <figcaption>A vibrant color palette used for a painting session.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="https://yourwebsite.com">Your Design Firm</a></p>
+        <p>&copy; 2025 Painting Passion. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.remove("active");
+            });
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
