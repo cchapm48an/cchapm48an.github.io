@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F5F1E7;
-            color: #333;
+            background-color: #92B6B1;
+            color: #4B2F3E;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,19 +17,19 @@
             min-height: 100vh;
         }
         header {
-            background-color: #2C3E50;
-            color: white;
+            background-color: #485696;
+            color: #B8B8E0;
             padding: 15px;
             text-align: center;
-        }
+        }   
         nav {
             display: flex;
             justify-content: center;
-            background-color: #D35400;
+            background-color: #D59AA9;
             padding: 10px;
         }
         nav a {
-            color: white;
+            color: #10423F;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -37,6 +37,7 @@
         }
         nav a:hover {
             text-decoration: underline;
+            color: #4E0404;
         }
         main {
             padding: 20px;
@@ -50,13 +51,13 @@
             display: block;
         }
         img {
-        max-width: 100%;
-        height: auto;
+            max-width: 100%;
+            height: auto;
         }
         #home img {
-        width: 400px;
-        height: auto;
-        border-radius: 10px;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
         }
         figure {
             margin: 20px auto;
@@ -66,14 +67,14 @@
             margin-top: 5px;
         }
         footer {
-            background-color: #2C3E50;
+            background-color: #5A494E; 
             color: white;
             text-align: center;
             padding: 15px;
             margin-top: auto;
         }
         footer a {
-            color: #1ABC9C;
+            color: #FFC49B; /* Soft orange for footer links */
             text-decoration: none;
             font-weight: bold;
         }
@@ -82,7 +83,7 @@
         }
         .btn {
             display: inline-block;
-            background-color: #2C3E50;
+            background-color: #B8B8E0; /* Soft lavender for buttons */
             color: white;
             padding: 8px 12px;
             margin: 5px;
@@ -91,7 +92,7 @@
             font-weight: bold;
         }
         .btn:hover {
-            background-color: #1ABC9C;
+            background-color: #D59AA9; /* Soft pink on hover */
         }
         ul {
             list-style-type: disc;
@@ -100,6 +101,19 @@
         }
         li {
             margin-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid #5A494E;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #B8B8E0;
+            color: white;
         }
     </style>
 </head>
@@ -110,11 +124,13 @@
     <nav>
         <a onclick="showSection('home')">Home</a>
         <a onclick="showSection('about')">About</a>
-        <a onclick="showSection('best-times')">Best Times</a>
-        <a onclick="showSection('best-locations')">Best Locations</a>
+        <a onclick="showSection('when')">When</a>
+        <a onclick="showSection('where')">Where</a>
         <a onclick="showSection('how')">How</a>
         <a onclick="showSection('why')">Why</a>
         <a onclick="showSection('ai-prompts')">AI Prompts</a>
+        <a href="../../itis3135/index.html">ITIS3135</a>
+
     </nav>    
 
     <main>
@@ -126,7 +142,7 @@
             
             <figure>
                 <img src="images/cloudabstract_painting.jpg" alt="Abstract Painting" width="300">
-                <figcaption>A paitning I created of an abstract clouds containing bold and bright colors.</figcaption>
+                <figcaption>A painting I created of an abstract clouds containing bold and bright colors.</figcaption>
             </figure>
         </section>
         
@@ -139,11 +155,11 @@
             
             <figure>
                 <img src="images/myeye_painting.jpg" alt="My Painting" width="350">
-                <figcaption>A painting I created, inspired by the dark and light in ones eye.</figcaption>
+                <figcaption>A painting I created, inspired by the dark and light in ones eye; red representing the darkness and blue representing pureness.</figcaption>
             </figure>
         </section>
 
-        <section id="best-times">
+        <section id="when">
             <h2>When - Best Times to Paint</h2>
              <p>The best time for painting largely depends on personal preference and the type of painting you're working on, but generally, early mornings and late afternoons are ideal. Painting in the early morning allows you to enjoy quieter surroundings, better focus, and a peaceful atmosphere as the world wakes up. Late afternoons, especially during the golden hour before sunset, offer stunning lighting that can add warmth and depth to your colors, making for a more enjoyable and visually captivating painting session. For those fitting painting into a busy schedule, lunchtime or early evening can also work, provided the lighting is favorable. It's important to avoid painting in harsh midday light, which can sometimes wash out colors and make it harder to capture details.</p>
     
@@ -155,7 +171,7 @@
             </figure>
         </section>
 
-        <section id="best-locations">
+        <section id="where">
             <h2>Where - Best Locations for Painting</h2>
             <p>Painting is an exhilarating way to express creativity, stay inspired, and explore different techniques. A studio is often ideal for focused, uninterrupted work. The controlled environment allows you to experiment with colors, texture, and compositions, giving you the freedom to fine-tune details and perfect your craft. Whether you’re surrounded by canvases, brushes, and the perfect lighting, a studio offers a space where your imagination can flow without limit. The solitude of a studio can be particularly inspiring, as it provides a space for deep concentration and a dedicated creative process.</p>
             
@@ -163,7 +179,7 @@
             
             <figure>
                 <img src="images/landscape_painting.jpg" alt="Landscape Area" width="300">
-                <figcaption>A cozy art studio with plenty of natural light.</figcaption>
+                <figcaption>A nice relaxing naturing view to paint at.</figcaption>
             </figure>
         </section>
 
@@ -171,7 +187,7 @@
             <h2>How - Painting Techniques</h2>
             <p>Learning to paint is an exciting journey that allows you to express your creativity and bring your imagination to life. Whether you're using acrylics, oils, gouache, or watercolors, painting offers endless possibilities to explore different techniques and styles. However, acrylic painting, in particular, is a versatile and accessible medium perfect for both beginners and experienced artists. Acrylics are known for their quick drying time, vibrant colors, and ability to be used on a variety of surfaces. Whether you’re painting landscapes, abstract art, or still lifes, acrylics provide a solid foundation for exploring various techniques. A quiet, well-lit space is ideal to start painting practice, where you can focus on the process without distractions. Some artists may prefer to work outdoors, capturing the natural light and beauty of their surroundings. With patience, anyone can develop their skills and discover the joy of creating art.</p>
             
-            <p>To begin, gather your materials and set up your workspace. You’ll need a canvas or acrylic-friendly paper, acrylic paints, brushes, and a palette for mixing colors. As you start your painting, consider sketching your composition lightly before applying paint to help guide your work. Here are some steps to follow:</p>
+            <p>To begin, gather your materials and set up your workspace. You’ll need a canvas or acrylic-friendly paper, acrylic paints, brushes, and a palette for mixing colors. As you start your painting, consider sketching your composition lightly before applying paint to help guide your work. Here are some helpful steps to follow:</p>
             
             <ul>
                 <li><strong>Step 1:</strong> Gather your supplies – choose a canvas or acrylic-friendly paper, acrylic paints, brushes, and a palette. Make sure you have water for cleaning your brushes and adjusting the paint consistency.</li> 
@@ -188,8 +204,22 @@
         </section>
 
         <section id="why">
-            <h2>The Joy of Painting</h2>
-            <p>Painting is a form of self-expression, relaxation, and a way to bring ideas to life. It helps clear the mind and provides a sense of accomplishment. The act of mixing colors, applying brush strokes, and watching a piece come together is deeply satisfying and rewarding. Art allows for emotional release and storytelling. The creative process fosters confidence and a deeper understanding of oneself.</p>
+            <h2>Why - The Joy of Painting</h2>
+            <p>Painting is an engaging and fulfilling activity that nurtures creativity and provides a therapeutic escape from daily stress. It offers an opportunity to explore your imagination, emotions, and ideas through various mediums, such as acrylic, oils, and watercolors. The process of painting can be deeply meditative, allowing you to focus and relax while bringing your vision to life. It fosters self-expression and can be a rewarding way to connect with your inner self, offering a break from the hustle and bustle of everyday life. Whether you’re working on a personal project or experimenting with new styles, painting offers endless opportunities for growth and discovery.</p>
+    
+            <p>Beyond creative expression, painting also helps build valuable skills, such as attention to detail, patience, and problem-solving. As you develop your technique and explore different methods, you gain confidence in your ability to create and experiment. Painting encourages innovation and allows you to step outside your comfort zone, whether by trying new materials or tackling more challenging subjects. It's not just about creating art; it's about the process of learning, adapting, and continually evolving as an artist.</p>
+    
+            <h3>Benefits of Painting:</h3>
+            <ul>
+                <li>Encourages self-expression and creativity</li>
+                <li>Provides a therapeutic way to reduce stress</li>
+                <li>Improves focus and concentration</li>
+                <li>Provides a relaxing, low-impact activity</li>
+                <li>Helps develop patience and attention to detail</li>
+                <li>Encourages problem-solving and innovation</li>
+                <li>Allows exploration of new artistic styles and techniques</li>
+            </ul>
+    
             <figure>
                 <img src="images/ai_paintingpalette.jpg" alt="Color Palette" width="300">
                 <figcaption>A vibrant color palette used for a painting session.</figcaption>
@@ -198,16 +228,64 @@
         
         <section id="ai-prompts">
             <h2>AI Prompts</h2>
-            <p>Below are the prompts used for AI-generated images:</p>
-            <ul>
-                <li>"A cozy art studio with plenty of natural light, filled with paintings and brushes."</li>
-                <li>"A vibrant color palette on a painter's table, ready for mixing and creating art."</li>
-                <li>"Prompt needed"</li>
-            </ul>
-            <h3>AI Details</h3>
-            <p>AI Used: [Type of AI used, e.g., DALL-E, MidJourney, etc.]</p>
-            <p>Additional Info: [Any extra information about how the AI was used, adjustments made, or inspiration behind the prompts.]</p>
-        </section>
+
+            <table border="1">
+                <tr>
+                    <th>Prompt</th>
+                    <th>Model</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Generate an image of a cozy art studio with plenty of natural light, filled with paintings and empty canvases.</td>
+                    <td>DeepAI</td>
+                    <td>Created an AI-generated image well-lit studio and emtpy canvases.</td>
+                </tr>
+                <tr>
+                    <td>Generate an image of a red hair woman artist painting a landscape on a large canvas with acrylics.</td>
+                    <td>magicstudio</td>
+                    <td>Created an image of an artist painting in a scenic outdoor setting.</td>
+                </tr>
+                <tr>
+                    <td>Generate an image of a colorful acrylic painting palette</td>
+                    <td>magicstudio</td>
+                    <td>Created a digital colorful acrylic painting palette in  a unique shape.</td>
+                </tr>
+                <tr>
+                    <td>Generate an image of on a hologram device showing a brain.</td>
+                    <td>magicstudio</td>
+                    <td>Created an AI-generated image of an hologram brain.</td>
+                </tr>
+                <tr>
+                    <td>Write a paragraph about painting</td>
+                    <td>4o</td>
+                    <td>Generated a paragraph describing the benefits and joy of painting.</td>
+                </tr>
+                <tr>
+                    <td>Write another paragraph about painting</td>
+                    <td>4o</td>
+                    <td>Expanded on painting as a creative and therapeutic activity.</td>
+                </tr>
+                <tr>
+                    <td>Write two paragraphs about the best times and seasons for painting</td>
+                    <td>4o</td>
+                    <td>Described ideal times of day and seasonal inspirations for painting.</td>
+                </tr>
+                <tr>
+                    <td>Write a paragraph on how to start painting with steps</td>
+                    <td>4o</td>
+                    <td>Outlined a step-by-step guide to getting started with painting.</td>
+                </tr>
+                <tr>
+                    <td>Write a paragraph on why painting is beneficial</td>
+                    <td>4o</td>
+                    <td>Described the mental, emotional, and cognitive benefits of painting.</td>
+                </tr>
+            </table>
+            <figure>
+                <img src="images/AIbrain_hologram.jpg" alt="Brush Technique" width="300">
+                <figcaption>Using different brush techniques for texture.</figcaption>
+            </figure>
+        </section>        
         
     </main>
 
