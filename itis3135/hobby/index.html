@@ -235,7 +235,7 @@
         <section id="ai-prompts">
             <h2>AI Prompts</h2>
 
-            <table border="1">
+            <table>
                 <tr>
                     <th>Prompt</th>
                     <th>Model</th>
@@ -302,7 +302,7 @@
     
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll("section").forEach(section => {
+            document.querySelectorAll("section").forEach((section) => {
                 section.classList.remove("active");
             });
             document.getElementById(sectionId).classList.add("active");
