@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christine Chapman Calm Cheetah 🃏 ITIS3135 Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Tables</h2>
+
+           <!-- Ordered List of Names -->
+           <h3>My Tabular Data</h3>
+           <ol>
+               <li>Princess Wilson - princess.wilson@gmail.com</li>
+               <li>Ruby Rose - ruby.rose@yahoo.com</li>
+               <li>John Smith - john.smith@billybobenterprises.com</li>
+               <li>Ruby Waters - ruby.waters@darkBaboonsInc.com</li>
+               <li>Tim Johnson - tim.johnson@hotmail.com</li>
+               <li>Kyle Pred - kyle.pred@gmail.com</li>
+               <li>Kim Madison - kim.madison@tallguysolutions.com</li>
+               <li>Ed McGlee - ed.mcglee@yahoo.com</li>
+               <li>Adeline Larson - adeline.larson@mycompany.com</li>
+           </ol>
+   
+ <!-- Original Employee Data Table -->
+ <h3>Employee Data in Simple Table</h3>
+ <table class="simple-table">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Email</th>
+             <th>Years of Service</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>Princess Wilson</td>
+             <td>princess.wilson@gmail.com</td>
+             <td>5</td>
+         </tr>
+         <tr>
+             <td>Ruby Rose</td>
+             <td>ruby.rose@yahoo.com</td>
+             <td>8</td>
+         </tr>
+         <tr>
+             <td>John Smith</td>
+             <td>john.smith@billybobenterprises.com</td>
+             <td>12</td>
+         </tr>
+         <tr>
+             <td>Ruby Waters</td>
+             <td>ruby.waters@darkBaboonsInc.com</td>
+             <td>3</td>
+         </tr>
+         <tr>
+             <td>Tim Johnson</td>
+             <td>tim.johnson@hotmail.com</td>
+             <td>15</td>
+         </tr>
+         <tr>
+             <td>Kyle Pred</td>
+             <td>kyle.pred@gmail.com</td>
+             <td>6</td>
+         </tr>
+         <tr>
+             <td>Kim Madison</td>
+             <td>kim.madison@tallguysolutions.com</td>
+             <td>10</td>
+         </tr>
+         <tr>
+             <td>Ed McGlee</td>
+             <td>ed.mcglee@yahoo.com</td>
+             <td>20</td>
+         </tr>
+         <tr>
+             <td>Adeline Larson</td>
+             <td>adeline.larson@mycompany.com</td>
+             <td>4</td>
+         </tr>
+     </tbody>
+ </table>
+
+ <!-- Complex Employee Data Table with Categories and Salaries -->
+ <h3>Employee Data in Complex Table</h3>
+ <figure>
+     <figcaption>Employee Information</figcaption>
+     <table class="complex-table">
+         <thead>
+             <tr>
+                 <th>Category</th>
+                 <th>Name</th>
+                 <th>Email</th>
+                 <th>Salary</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td rowspan="2">Bosses</td>
+                 <td>Ruby Rose</td>
+                 <td>ruby.rose@chapmanenterprise.cc</td>
+                 <td>$10,000</td>
+             </tr>
+             <tr>
+                 <td>Tim Johnson</td>
+                 <td>tim.johnson@hotmail.com</td>
+                 <td>$15,000</td>
+             </tr>
+             <tr>
+                 <td rowspan="3">Development</td>
+                 <td>Princess Wilson</td>
+                 <td>princess.wilson@gmail.com</td>
+                 <td>$5,000</td>
+             </tr>
+             <tr>
+                <td>John Smith</td>
+                <td>john.smith@yahoo.com</td>
+                <td>$7,000</td>
+             </tr>
+             <tr>
+                 
+                <td>Kyle Pred</td>
+                <td>kyle.pred@gmail.com</td>
+                <td>$6,000</td>
+            </tr>
+             <tr>
+                 <td>Marketing</td>
+                 <td>Ruby Waters</td>
+                 <td>ruby.waters@darkBaboonsInc.com</td>
+                 <td>$3,000</td>
+             </tr>
+             <tr>
+                 <td>Support</td>
+                 <td>Kim Madison</td>
+                 <td>kim.madison@tallguysolutions.com</td>
+                 <td>$5,000</td>
+             </tr>
+             <tr>
+                <td>Junior Staff</td>
+                <td>Adeline Larson</td>
+                <td>adeline.larson@mycompany.com</td>
+                <td>$4,000</td>
+            </tr>
+             <tr>
+                 <td>General Staff</td>
+                 <td>Ed McGlee</td>
+                 <td>ed.mcglee@yahoo.com</td>
+                 <td>$4,000</td>
+             </tr>
+             <tr>
+                 <td colspan="3"><strong>Total Years of Service</strong></td>
+                 <td><strong>83</strong></td>
+             </tr>
+             <tr>
+                 <td colspan="3"><strong>Total Monthly Salary</strong></td>
+                 <td><strong>59,000</strong></td>
+             </tr>
+         </tbody>
+     </table>
+ </figure>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>           
+    </footer>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <script src="scripts/include.js"></script>
+</body>
+</html>
