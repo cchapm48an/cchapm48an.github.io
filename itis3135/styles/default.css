@@ -84,7 +84,6 @@ table {
     border-collapse: separate;
     background-color: #1f1d1d;
     color: whitesmoke;
-   // border-radius: 8px;
 }
 
 table.simple-table, table.complex-table {
