@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christine Chapman Calm Cheetah 🃏 ITIS3135 Home</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>BYO Intro</h2>
+        
+        <h3>Time to BYO Intro! Fill out the form below to create your own page</h3>
+
+        <form id="byoIntroForm">
+            <label for="name">Name: </label>
+            <input type="text" id="name" value="Your Name" required>
+
+            <label for="mascot">Mascot: </label>
+            <input type="text" id="mascot" value="Your Mascot" required>
+
+            <label for="image">Image: </label>
+            <input type="file" id="image" accept=".png, .jpg, .jpeg" required>
+
+            <label for="caption">Image Caption: </label>
+            <input type="text" id="caption" value="Your Caption" required>
+
+            <label for="personalBackground">Personal Background: </label>
+            <input type="text" id="personalBackground" value="Your personal background here." required>
+
+            <label for="professionalBackground">Professional Background: </label>
+            <input type="text" id="professionalBackground" value="Your professional background here." required>
+
+            <label for="academicBackground">Academic Background: </label>
+            <input type="text" id="academicBackground" value="Your academic background here." required>
+
+            <label for="webDevBackground">Background in Web Development: </label>
+            <input type="text" id="webDevBackground" value="Your web dev background here." required>
+
+            <label for="computerPlatform">Primary Computer Platform: </label>
+            <input type="text" id="computerPlatform" value="Your platform" required>
+
+            <label for="coursesList">Courses Taking: </label>
+            <input type="text" id="coursesList" name="courses[]" placeholder="Enter a course" required>
+            <button type="button" onclick="addCourse()">Add Course</button>
+
+            <label for="funnyThing">Funny Thing: </label>
+            <input type="text" id="funnyThing">
+
+            <label for="anythingElse">Anything Else: </label>
+            <input type="text" id="anythingElse">
+
+            <label for="agreement">
+                <input type="checkbox" id="agreement" required>
+                I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+            </label>
+
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </form>
+
+    </main>
+    
+    <footer>
+        <div data-include="components/footer.html"></div>           
+    </footer>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <script src="scripts/include.js"></script>
+    <script src="scripts/introsurvey.js"></script>
+</body>
+</html>
