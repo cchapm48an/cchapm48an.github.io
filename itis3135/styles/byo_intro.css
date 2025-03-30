@@ -38,8 +38,8 @@ label[for="anythingElse"] {
     grid-column: 1;
 }
 
-input#funnyThing, 
-input#anythingElse {
+#funnyThing, 
+#anythingElse {
     grid-column: 2;
 }
 
