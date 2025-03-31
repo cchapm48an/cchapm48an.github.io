@@ -16,7 +16,6 @@ label {
 input[type="text"], input[type="file"], textarea {
     padding: 8px;
     font-size: 14px;
-    width: 100%;
 }
 
 .course-container {
