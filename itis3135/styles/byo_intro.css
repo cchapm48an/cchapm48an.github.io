@@ -19,27 +19,23 @@ input[type="text"], input[type="file"], textarea {
     width: 100%;
 }
 
-/* check on */
 .course-container {
     display: flex;
     gap: 5px;
 }
 
-/* Align Add Course Button */
-#addCourse {
+/* Align Add/Remove Course Buttons */
+#addCourse, #removeCourse {
     grid-column: 2;
     justify-self: end;
-    
 }
 
 /* Ensure Funny Thing and Anything Else are aligned properly */
-label[for="funnyThing"], 
-label[for="anythingElse"] {
+label[for="funnyThing"], label[for="anythingElse"] {
     grid-column: 1;
 }
 
-#funnyThing, 
-#anythingElse {
+#funnyThing, #anythingElse {
     grid-column: 2;
 }
 

@@ -13,7 +13,6 @@
     </header>
     <main>
         <h2>BYO Intro</h2>
-        
         <h3>Time to BYO Intro! Fill out the form below to create your own page.</h3>
 
         <form id="byoIntroForm">
@@ -44,32 +43,35 @@
             <label for="computerPlatform">Primary Computer Platform: </label>
             <input type="text" id="computerPlatform" placeholder="Your platform:" required>
 
-            <label for="coursesList">Courses Taking: </label>
-            <input type="text" id="coursesList" name="courses[]" placeholder="Enter a course:" required>
-            <button type="button" onclick="addCourse()">Add Course</button>
+            <label>Courses Taking:</label>
+            <div id="coursesContainer">
+                <input type="text" name="courses[]" placeholder="Enter a course:" required>
+            </div>
+            <button type="button" id="addCourse">Add Course</button>
+            <button type="button" id="removeCourse" style="display: none;">Remove Course</button>
 
             <label for="funnyThing">Funny Thing: </label>
             <input type="text" id="funnyThing" placeholder="Funny thing:" required>
 
             <label for="anythingElse">Anything Else: </label>
-            <input type="text" id="anythingElse"placeholder="Something else:" required>
-            
+            <input type="text" id="anythingElse" placeholder="Something else:" required>
+
             <label for="agreement">
                 <input type="checkbox" id="agreement" required>
                 I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
             </label>
 
-            <button type="submit" id="submitBtn">Submit</button>
-            <button type="reset" id="resetBtn">Reset</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
         </form>
 
+        <div id="output"></div>
     </main>
 
     <footer>
         <div data-include="components/footer.html"></div>           
     </footer>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    
+
     <script src="scripts/include.js"></script>
     <script src="scripts/introsurvey.js"></script>
 </body>
