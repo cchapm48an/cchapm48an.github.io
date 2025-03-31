@@ -20,7 +20,8 @@ input[type="text"], input[type="file"], textarea {
 
 .course-container {
     display: flex;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 /* Align Add/Remove Course Buttons */

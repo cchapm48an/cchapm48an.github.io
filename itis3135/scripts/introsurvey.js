@@ -51,14 +51,49 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const courses = [...document.getElementsByName("courses[]")].map(input => input.value).join(", ");
+        const coursesArray = [...document.getElementsByName("courses[]")]
+            .map((input) => input.value.trim())
+            .filter((course) => course !== "");
 
-        outputDiv.innerHTML = `
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Mascot:</strong> ${mascot}</p>
-            <p><strong>Courses:</strong> ${courses}</p>
-            <p><strong>Funny Thing:</strong> ${funnyThing}</p>
-            <p><strong>Anything Else:</strong> ${anythingElse}</p>
-        `;
+        const coursesList = coursesArray.length > 0
+            ? `<ul>${coursesArray.map((course) => `<li>${course}</li>`).join("")}</ul>`
+            : "<p>No courses entered.</p>";
+
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                outputDiv.innerHTML = `
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Mascot:</strong> ${mascot}</p>
+                    <img src="${e.target.result}" alt="Uploaded Image" style="max-width: 300px; display: block; margin-top: 10px;">
+                    <p><strong>Image Caption:</strong> ${caption}</p>
+                    <p><strong>Personal Background:</strong> ${personalBackground}</p>
+                    <p><strong>Professional Background:</strong> ${professionalBackground}</p>
+                    <p><strong>Academic Background:</strong> ${academicBackground}</p>
+                    <p><strong>Web Development Background:</strong> ${webDevBackground}</p>
+                    <p><strong>Primary Computer Platform:</strong> ${computerPlatform}</p>
+                    <h3>Courses Taking:</h3>
+                    ${coursesList}
+                    <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+                    <p><strong>Anything Else:</strong> ${anythingElse}</p>
+                `;
+            };
+            reader.readAsDataURL(imageFile);
+        } else {
+            outputDiv.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Mascot:</strong> ${mascot}</p>
+                <p><strong>Image Caption:</strong> ${caption}</p>
+                <p><strong>Personal Background:</strong> ${personalBackground}</p>
+                <p><strong>Professional Background:</strong> ${professionalBackground}</p>
+                <p><strong>Academic Background:</strong> ${academicBackground}</p>
+                <p><strong>Web Development Background:</strong> ${webDevBackground}</p>
+                <p><strong>Primary Computer Platform:</strong> ${computerPlatform}</p>
+                <h3>Courses Taking:</h3>
+                ${coursesList}
+                <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+                <p><strong>Anything Else:</strong> ${anythingElse}</p>
+            `;
+        }
     });
 });
