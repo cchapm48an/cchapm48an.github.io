@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         outputDiv.innerHTML = "";
 
-        const name = document.getElementById("name").value;
+        const firstName = document.getElementById("firstName").value;
+        const middleName = document.getElementById("middleName").value;
+        const initial = document.getElementById("initial").value;
+        const nickname = document.getElementById("nickname").value;
         const mascot = document.getElementById("mascot").value;
         const imageFile = document.getElementById("image").files[0];
         const caption = document.getElementById("caption").value;
@@ -38,16 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const webDevBackground = document.getElementById("webDevBackground").value;
         const computerPlatform = document.getElementById("computerPlatform").value;
         const funnyThing = document.getElementById("funnyThing").value;
-        const anythingElse = document.getElementById("anythingElse").value;
-        const agreement = document.getElementById("agreement").checked;
 
         if (!imageFile || !["image/png", "image/jpg", "image/jpeg"].includes(imageFile.type)) {
-            alert("Invalid image file.");
-            return;
-        }
-
-        if (!agreement) {
-            alert("You must agree to the terms.");
+            alert("Invalid image file. Please upload a PNG, JPG, or JPEG.");
             return;
         }
 
@@ -59,41 +55,26 @@ document.addEventListener("DOMContentLoaded", function () {
             ? `<ul>${coursesArray.map((course) => `<li>${course}</li>`).join("")}</ul>`
             : "<p>No courses entered.</p>";
 
-        if (imageFile) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                outputDiv.innerHTML = `
-                    <p><strong>Name:</strong> ${name}</p>
-                    <p><strong>Mascot:</strong> ${mascot}</p>
-                    <img src="${e.target.result}" alt="Uploaded Image" style="max-width: 300px; display: block; margin-top: 10px;">
-                    <p><strong>Image Caption:</strong> ${caption}</p>
-                    <p><strong>Personal Background:</strong> ${personalBackground}</p>
-                    <p><strong>Professional Background:</strong> ${professionalBackground}</p>
-                    <p><strong>Academic Background:</strong> ${academicBackground}</p>
-                    <p><strong>Web Development Background:</strong> ${webDevBackground}</p>
-                    <p><strong>Primary Computer Platform:</strong> ${computerPlatform}</p>
-                    <h3>Courses Taking:</h3>
-                    ${coursesList}
-                    <p><strong>Funny Thing:</strong> ${funnyThing}</p>
-                    <p><strong>Anything Else:</strong> ${anythingElse}</p>
-                `;
-            };
-            reader.readAsDataURL(imageFile);
-        } else {
+        const reader = new FileReader();
+        reader.onload = function (e) {
             outputDiv.innerHTML = `
-                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Middle Name:</strong> ${middleName}</p>
+                <p><strong>Initial:</strong> ${initial}</p>
+                <p><strong>Nickname:</strong> ${nickname || "N/A"}</p>
                 <p><strong>Mascot:</strong> ${mascot}</p>
+                <img src="${e.target.result}" alt="Uploaded Image" style="max-width: 300px; display: block; margin-top: 10px;">
                 <p><strong>Image Caption:</strong> ${caption}</p>
                 <p><strong>Personal Background:</strong> ${personalBackground}</p>
                 <p><strong>Professional Background:</strong> ${professionalBackground}</p>
                 <p><strong>Academic Background:</strong> ${academicBackground}</p>
-                <p><strong>Web Development Background:</strong> ${webDevBackground}</p>
+                <p><strong>Programming/Software Background:</strong> ${webDevBackground}</p>
                 <p><strong>Primary Computer Platform:</strong> ${computerPlatform}</p>
                 <h3>Courses Taking:</h3>
                 ${coursesList}
-                <p><strong>Funny Thing:</strong> ${funnyThing}</p>
-                <p><strong>Anything Else:</strong> ${anythingElse}</p>
+                <p><strong>Funny/Interesting Item:</strong> ${funnyThing}</p>
             `;
-        }
+        };
+        reader.readAsDataURL(imageFile);
     });
 });

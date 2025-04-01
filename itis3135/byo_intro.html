@@ -16,55 +16,62 @@
         <h3>Time to BYO Intro! Fill out the form below to create your own page.</h3>
 
         <form id="byoIntroForm">
-            <label for="name">Name: </label>
-            <input type="text" id="name" placeholder="Your Name:" required>
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" value="Christine" required>
 
+            <label for="initial">Initial: </label>
+            <input type="text" id="initial" value="A">
+        
+            <label for="middleName">Middle Name: </label>
+            <input type="text" id="middleName" value="Chapman" required>
+        
+            <label for="nickname">Nickname: </label>
+            <input type="text" id="nickname" value="N/A">
+            
             <label for="mascot">Mascot: </label>
-            <input type="text" id="mascot" placeholder="Your Mascot:" required>
+            <input type="text" id="mascot" value="Calming Cheetah" required>
 
             <label for="image">Image: </label>
             <input type="file" id="image" accept=".png, .jpg, .jpeg" required>
-
+        
             <label for="caption">Image Caption: </label>
-            <input type="text" id="caption" placeholder="Your Caption:" required>
-
+            <input type="text" id="caption" value="Me and my mom up in the mountains of Gatlinburg, TN 2024" required>
+        
             <label for="personalBackground">Personal Background: </label>
-            <input type="text" id="personalBackground" placeholder="Your personal background here:" required>
-
+            <input type="text" id="personalBackground" value="Grew up in North Carolina, moved three times from Porters Landing, Raleigh, and finally Mint Hill. I have two dogs." required>
+        
             <label for="professionalBackground">Professional Background: </label>
-            <input type="text" id="professionalBackground" placeholder="Your professional background here:" required>
-
+            <input type="text" id="professionalBackground" value="None." required>
+        
             <label for="academicBackground">Academic Background: </label>
-            <input type="text" id="academicBackground" placeholder="Your academic background here:" required>
-
-            <label for="webDevBackground">Background in Web Development: </label>
-            <input type="text" id="webDevBackground" placeholder="Your web dev background here:" required>
-
+            <input type="text" id="academicBackground" value="Got my AA degree at CPCC and now here at UNCC as a junior." required>
+        
+            <label for="webDevBackground">Programming/Software Background in this subject: </label>
+            <input type="text" id="webDevBackground" value="I remember the basics of a little bit of HTML from high school, and I have some experience in Java programming." required>
+        
             <label for="computerPlatform">Primary Computer Platform: </label>
-            <input type="text" id="computerPlatform" placeholder="Your platform:" required>
-
-            <label>Courses Taking:</label>
-            <div id="coursesContainer">
-                <input type="text" name="courses[]" placeholder="Enter a course:" required>
+            <input type="text" id="computerPlatform" value="I mostly use a Laptop for school and a Windows 11 desktop at home usually for gaming." required>
+        
+            <label>Courses I'm Taking & Why:</label>
+            <div id="coursesContainer"> //either textbox longer or have the value part in a different textbox get rid of padding
+                <input type="text" name="courses[]" value="ITSC 2600 - Computer Science Program, Identity, Career - required for my major." required>
+                <input type="text" name="courses[]" value="ITIS 3200 - Intro to Info Security & Priv - required for my major." required>
+                <input type="text" name="courses[]" value="ITIS 3130 - Introduction to Human-Centered Computing - required for my major." required>
+                <input type="text" name="courses[]" value="ITSC 2175 - Logic and Algorithms - required for my major." required>
+                <input type="text" name="courses[]" value="ITIS 3135 - Web-Based Application Design and Development - was recommended by my adviser and seems like a cool class that goes along with my major." required>
             </div>
             <button type="button" id="addCourse">Add Course</button>
-            <button type="button" id="removeCourse" style="display: none;">Remove Course</button>
-
-            <label for="funnyThing">Funny Thing: </label>
-            <input type="text" id="funnyThing" placeholder="Funny thing:" required>
-
-            <label for="anythingElse">Anything Else: </label>
-            <input type="text" id="anythingElse" placeholder="Something else:" required>
-
-            <label for="agreement">
-                <input type="checkbox" id="agreement" required>
-                I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-            </label>
-
+            <button type="button" id="removeCourse" style="display: none;">Remove Course</button> //text box should be longer
+        
+            <label for="funnyThing">Funny/Interesting item about yourself: </label>
+            <input type="text" id="funnyThing" value="I love painting and wood burning." required>
+        
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
         </form>
+        
         <div id="output"></div>
+        
     </main>
 
     <footer>
