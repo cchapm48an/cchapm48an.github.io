@@ -31,3 +31,8 @@ li {
 p {
     font-size: 1.2rem;
 }
+
+.italic-text {
+    font-style: italic;
+    font-weight: normal;
+}
