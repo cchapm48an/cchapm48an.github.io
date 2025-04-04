@@ -12,20 +12,21 @@ function showSection(sectionId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Handle Goals Form
-  const goalForm = document.getElementById('goals-form');
-  const goalInput = document.getElementById('goal');
-  const goalList = document.getElementById('goal-list');
+  // Handle income Form
+  const incomeForm = document.getElementById('income-form');
+  const incomeInput = document.getElementById('income');
+  const incomeList = document.getElementById('income-list');
 
-  if (goalForm) {
-    goalForm.addEventListener('submit', (e) => {
+
+  if (incomeForm) {
+    incomeForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const li = document.createElement('li');
-      li.textContent = goalInput.value;
-      goalList.appendChild(li);
-      goalInput.value = '';
+      li.textContent = incomeInput.value;
+      incomeList.appendChild(li);
+      incomeInput.value = '';
     });
-  }
+  }  
 
   // Handle Expense Form
   const expenseForm = document.getElementById('expense-form');

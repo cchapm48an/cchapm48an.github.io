@@ -19,6 +19,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="budget.html">Creating a Budget</a></li>
       <li><a href="resources.html">Resources</a></li>
+      <li><a href="../../itis3135/index.html">ITIS3135</a></li>
     </ul>
   </nav>
 
@@ -26,7 +27,7 @@
   <ul class="subnav">
     <li><a href="#" onclick="showSection('tracking')">Tracking Expenses</a></li>
     <li><a href="#" onclick="showSection('saving')">Saving Strategies</a></li>
-    <li><a href="#" onclick="showSection('goals')">Setting Financial Goals</a></li>
+    <li><a href="#" onclick="showSection('income')">Identify All Income Sources</a></li>
   </ul>
 
   <!-- Content Sections (Hidden by default) -->
@@ -53,14 +54,15 @@
       <a href="https://www.investopedia.com/articles/pf/06/emergencyfund.asp" target="_blank">More on Saving</a>
     </section>
 
-    <section id="goals" class="content-section hidden">
-      <h2>Setting Financial Goals</h2>
-      <form id="goals-form">
-        <label>Enter a financial goal:</label><br>
-        <input type="text" id="goal" required>
-        <button type="submit">Add Goal</button>
-      </form>
-      <ul id="goal-list"></ul>
+    <section id="income" class="content-section hidden">
+        <h2>Identify All Income Sources</h2>
+      
+        <form id="income-form">
+            <label>Enter an income source:</label><br>
+            <input type="text" id="income" required>
+            <button type="submit">Add Source</button>
+        </form>
+          <ul id="income-list"></ul>          
     </section>
   </main>
 
