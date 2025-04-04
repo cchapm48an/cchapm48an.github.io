@@ -2,69 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creating a Budget | Personal Budgeting</title>
-  
-<link rel="stylesheet" href="../styles/client.css">
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
   <title>Creating a Budget - Budgeting Basics</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="../styles/client.css">
+  <script defer src="../scripts/clientproject.js"></script>
 </head>
 <body>
   <header>
     <h1>Creating a Budget</h1>
-    <p>Set goals, track spending, and build savings.</p>
+    <p>Learn how to manage your money wisely!</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="budget.html">Create a Budget</a></li>
-      <li><a href="resources.html">Resources</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section>
-      <h2>When: Financial Goals</h2>
-      <form id="goals-form">
-        <label>Enter a financial goal:</label><br>
-        <input type="text" id="goal" required>
-        <button type="submit">Add Goal</button>
-        <ul id="goal-list"></ul>
-      </form>
-    </section>
-
-    <section>
-      <h2>Where: Track Your Expenses</h2>
-      <form id="expense-form">
-        <label>Category:</label>
-        <input type="text" id="category" required>
-        <label>Amount ($):</label>
-        <input type="number" id="amount" required>
-        <button type="submit">Add Expense</button>
-        <ul id="expense-list"></ul>
-      </form>
-    </section>
-
-    <section>
-      <h2>How: Saving Strategies</h2>
-      <p>Build an emergency fund, set aside money monthly, and explore high-yield savings accounts.</p>
-      <a href="https://www.investopedia.com/articles/pf/06/emergencyfund.asp" target="_blank">Learn More</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>Budgeting Basics © 2025</p>
-  </footer>
-</body>
-</html>
-
+  <!-- Main Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -74,18 +22,50 @@
     </ul>
   </nav>
 
+  <!-- Sub-navigation for budget sections -->
+  <ul class="subnav">
+    <li><a href="#" onclick="showSection('tracking')">Tracking Expenses</a></li>
+    <li><a href="#" onclick="showSection('saving')">Saving Strategies</a></li>
+    <li><a href="#" onclick="showSection('goals')">Setting Financial Goals</a></li>
+  </ul>
+
+  <!-- Content Sections (Hidden by default) -->
   <main>
-    <h1>Creating a Budget</h1>
-    <p> When creating a budget is a crucial step in financial planning. Below, you'll find links to resources that help you track your expenses, build saving strategies, and set financial goals.</p>
-    <ul>
-      <li><a href="tracking.html">When: Tracking Expenses</a></li>
-      <li><a href="saving.html">Where: Saving Strategies</a></li>
-      <li><a href="goals.html">Why: Setting Financial Goals</a></li>
-    </ul>
+    <p>
+        This is placeholder text for the Creating a Budget page. Here, you can describe the importance of budgeting or provide introductory tips. Your client can update this paragraph later with custom content.
+        Note: will also make this not show on every page. 
+    </p>
+    <section id="tracking" class="content-section hidden">
+      <h2>Tracking Expenses</h2>
+      <form id="expense-form">
+        <label>Category:</label>
+        <input type="text" id="category" required>
+        <label>Amount ($):</label>
+        <input type="number" id="amount" required>
+        <button type="submit">Add Expense</button>
+      </form>
+      <ul id="expense-list"></ul>
+    </section>
+
+    <section id="saving" class="content-section hidden">
+      <h2>Saving Strategies</h2>
+      <p>Save automatically by setting up recurring transfers. Use high-yield savings accounts and avoid impulse purchases.</p>
+      <a href="https://www.investopedia.com/articles/pf/06/emergencyfund.asp" target="_blank">More on Saving</a>
+    </section>
+
+    <section id="goals" class="content-section hidden">
+      <h2>Setting Financial Goals</h2>
+      <form id="goals-form">
+        <label>Enter a financial goal:</label><br>
+        <input type="text" id="goal" required>
+        <button type="submit">Add Goal</button>
+      </form>
+      <ul id="goal-list"></ul>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Paul Chapman - All Rights Reserved</p>
+    <p>Budgeting Basics © 2025</p>
   </footer>
 </body>
 </html>
