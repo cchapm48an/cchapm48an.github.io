@@ -1,23 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("expenseForm");
-    const totalDisplay = document.getElementById("totalDisplay");
-    const totalAmount = document.getElementById("totalAmount");
+// Handle Financial Goals
+document.addEventListener('DOMContentLoaded', () => {
+    const goalForm = document.getElementById('goals-form');
+    const goalInput = document.getElementById('goal');
+    const goalList = document.getElementById('goal-list');
   
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+    if (goalForm) {
+      goalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const li = document.createElement('li');
+        li.textContent = goalInput.value;
+        goalList.appendChild(li);
+        goalInput.value = '';
+      });
+    }
   
-      const rent = parseFloat(document.getElementById("rent").value) || 0;
-      const food = parseFloat(document.getElementById("food").value) || 0;
-      const entertainment = parseFloat(document.getElementById("entertainment").value) || 0;
+    // Handle Expenses
+    const expenseForm = document.getElementById('expense-form');
+    const categoryInput = document.getElementById('category');
+    const amountInput = document.getElementById('amount');
+    const expenseList = document.getElementById('expense-list');
   
-      if (rent < 0 || food < 0 || entertainment < 0) {
-        alert("Please enter only positive values.");
-        return;
-      }
-  
-      const total = rent + food + entertainment;
-      totalAmount.textContent = total.toFixed(2);
-      totalDisplay.classList.remove("hidden");
-    });
+    if (expenseForm) {
+      expenseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const li = document.createElement('li');
+        li.textContent = `${categoryInput.value}: $${parseFloat(amountInput.value).toFixed(2)}`;
+        expenseList.appendChild(li);
+        categoryInput.value = '';
+        amountInput.value = '';
+      });
+    }
   });
   
