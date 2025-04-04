@@ -52,6 +52,13 @@ p {
   font-family: sans-serif;
 }
 
+.centered-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .content-section {
   margin-top: 20px;
   padding: 15px;
