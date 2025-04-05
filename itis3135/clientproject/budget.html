@@ -37,15 +37,39 @@
         This is placeholder text for the Creating a Budget page. Here, you can describe the importance of budgeting or provide introductory tips. Your client can update this paragraph later with custom content.
       </p>
     </section>
+
     <section id="tracking" class="content-section hidden">
       <h2>Tracking Expenses</h2>
+      <p>Select a category and enter your expense amount. These categories are based on common budgeting guidelines.</p>
+      
+      <div class="centered-image">
+        <img src="images/piechart_tracking.JPG" alt="Budget breakdown pie chart">
+        <p class="image-caption">Follow this guide when categorizing your expenses.</p>
+      </div>
+      
+
       <form id="expense-form">
-        <label>Category:</label>
-        <input type="text" id="category" required>
-        <label>Amount ($):</label>
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option value="">-- Select Category --</option>
+          <option value="Housing">Housing (25–30%)</option>
+          <option value="Insurance">Insurance (10–20%)</option>
+          <option value="Food">Food (10–15%)</option>
+          <option value="Savings">Savings (10–15%)</option>
+          <option value="Transportation">Transportation (10–15%)</option>
+          <option value="Personal">Personal (5–10%)</option>
+          <option value="Recreation">Recreation (5–10%)</option>
+          <option value="Utilities">Utilities (5–10%)</option>
+          <option value="Giving">Giving (1–5%)</option>
+        </select>
+    
+        <label for="amount">Amount ($):</label>
         <input type="number" id="amount" required>
+    
         <button type="submit">Add Expense</button>
       </form>
+    
+      <h3>Expense List</h3>
       <ul id="expense-list"></ul>
     </section>
 
