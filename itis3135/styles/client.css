@@ -6,11 +6,11 @@ html, body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-  background-color: #C9F5D9;
+  background-color: #83bb83;
 }
 
 header {
-  background: #01796F;
+  background: #053f05;
   color: white;
   padding: 20px;
   text-align: center;
@@ -20,7 +20,7 @@ nav ul, .subnav {
   list-style: none;
   padding: 15px;
   margin: 0;
-  background-color: #3eb489;
+  background-color: #1f6b1f;
   display: flex;
   justify-content: center;
 }
@@ -34,12 +34,12 @@ nav ul li a, .subnav a {
   padding: 10px 15px;
   display: block;
   color: white;
-  background-color: #2e8f6f;
+  background-color: #044b04;
   border-radius: 5px;
 }
 
 nav ul li a:hover, .subnav a:hover {
-  background-color: #32879c;
+  background-color: #286a7a;
 }
 
 main {
@@ -62,7 +62,7 @@ p {
 .content-section {
   margin-top: 20px;
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: #479147;
   border-radius: 8px;
 }
 
@@ -73,7 +73,7 @@ p {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #01796F;
+  background-color: #053f05;
   color: white;
   margin-top: 30px;
 }
