@@ -142,6 +142,7 @@ p {
 #income-form input[type="number"] {
   padding: 5px;
   width: 45%;
+  box-sizing: border-box;
 }
 
 #income-form button[type="submit"] {
