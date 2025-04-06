@@ -63,7 +63,10 @@ p {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .content-section {
   margin-top: 20px;
