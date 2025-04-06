@@ -11,41 +11,73 @@ function showSection(id) {
   }
 }
 
-// Show the intro section by default on page load
+// Run everything after DOM loads
 window.addEventListener('DOMContentLoaded', () => {
+  // Show the intro section by default
   showSection('intro');
-});
 
-document.addEventListener('DOMContentLoaded', () => {
   // Handle income form
   const incomeForm = document.getElementById('income-form');
-  const incomeInput = document.getElementById('income');
+  const sourceInput = document.getElementById('income-source');
+  const incomeAmountInput = document.getElementById('income-amount');
   const incomeList = document.getElementById('income-list');
+  const totalDisplay = document.getElementById('total-income');
+  const averageDisplay = document.getElementById('average-income');
+
+  const incomes = [];
 
   if (incomeForm) {
     incomeForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const li = document.createElement('li');
-      li.textContent = incomeInput.value;
-      incomeList.appendChild(li);
-      incomeInput.value = '';
+
+      const source = sourceInput.value.trim();
+      const amount = parseFloat(incomeAmountInput.value);
+
+      if (source && !isNaN(amount)) {
+        incomes.push(amount);
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+          <td>${source}</td>
+          <td>$${amount.toFixed(2)}</td>
+        `;
+
+        incomeList.appendChild(row);
+        sourceInput.value = '';
+        incomeAmountInput.value = '';
+
+        updateSummary();
+      }
     });
+  }
+
+  function updateSummary() {
+    const total = incomes.reduce((acc, val) => acc + val, 0);
+    const average = incomes.length ? total / incomes.length : 0;
+
+    totalDisplay.textContent = `$${total.toFixed(2)}`;
+    averageDisplay.textContent = `$${average.toFixed(2)}`;
   }
 
   // Handle expense form
   const expenseForm = document.getElementById('expense-form');
   const categoryInput = document.getElementById('category');
-  const amountInput = document.getElementById('amount');
+  const expenseAmountInput = document.getElementById('amount');
   const expenseList = document.getElementById('expense-list');
 
   if (expenseForm) {
     expenseForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const li = document.createElement('li');
-      li.textContent = `${categoryInput.value}: $${parseFloat(amountInput.value).toFixed(2)}`;
-      expenseList.appendChild(li);
-      categoryInput.value = '';
-      amountInput.value = '';
+      const category = categoryInput.value.trim();
+      const amount = parseFloat(expenseAmountInput.value);
+
+      if (category && !isNaN(amount)) {
+        const li = document.createElement('li');
+        li.textContent = `${category}: $${amount.toFixed(2)}`;
+        expenseList.appendChild(li);
+        categoryInput.value = '';
+        expenseAmountInput.value = '';
+      }
     });
   }
 });

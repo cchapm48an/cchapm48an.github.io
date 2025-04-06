@@ -80,15 +80,49 @@
     </section>
 
     <section id="income" class="content-section hidden">
-        <h2>Identify All Income Sources</h2>
+      <h2>Identify All Income Sources</h2>
+      <p>To accurately define all your income sources, begin by reviewing your regular and irregular earnings. This includes full-time or part-time wages, freelance work, side gigs, government benefits, child support, rental income, and any other incoming funds. Refer to the green income table in the spreadsheet below as a guide—it breaks down typical categories and helps you avoid missing smaller, less obvious income streams. Being thorough here ensures your budget reflects your true financial situation.</p>
+    
+      <div class="centered-image">
+        <img src="images/Personal_Budget_Spreadsheet.png" alt="income breakdown spreadsheet">
+        <p class="image-caption">Follow this guide when categorizing your income (green table).</p>
+      </div>
+
+      <div id="income-form-container">
+        <div class="income-header">INCOME</div>
+        <div class="income-input-row">
+          <form id="income-form">
+            <label for="income-source">Source:</label>
+            <input type="text" id="income-source" required>
       
-        <form id="income-form">
-            <label>Enter an income source:</label><br>
-            <input type="text" id="income" required>
+            <label for="income-amount">Amount ($):</label>
+            <input type="number" id="income-amount" required>
+      
             <button type="submit">Add Source</button>
-        </form>
-          <ul id="income-list"></ul>          
-    </section>
+          </form>
+        </div>
+      
+        <table id="income-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Amount ($)</th>
+            </tr>
+          </thead>
+          <tbody id="income-list"></tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td id="total-income" class="summary-cell">$0.00</td>
+            </tr>
+            <tr>
+              <td><strong>Average</strong></td>
+              <td id="average-income" class="summary-cell">$0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+        
+    </section>    
   </main>
 
   <footer>

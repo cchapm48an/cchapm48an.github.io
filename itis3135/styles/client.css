@@ -102,6 +102,90 @@ p {
   margin: 0 auto;
 }
 
+/* Income Form Styles */
+#income-form-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.income-header {
+  background-color: #19421a;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+.income-input-row {
+  background-color: #c7d1c9;
+  padding: 10px;
+  border-radius: 0 0 4px 4px;
+}
+
+#income-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#income-form input[type="text"],
+#income-form input[type="number"] {
+  padding: 5px;
+  width: 45%;
+}
+
+#income-form button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #0e7210;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Income table styles */
+#income-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+
+#income-table th,
+#income-table td {
+  border: 1px solid #2b742d;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Alternating row colors */
+#income-table tbody tr:nth-child(odd) td {
+  background-color: #3d7224; 
+}
+
+#income-table tbody tr:nth-child(even) td {
+  background-color: white; 
+}
+
+#income-table tfoot td {
+  font-weight: bold;
+  background-color: #cbe2c4;
+}
+
+#income-table th,
+#income-table td {
+  border: 1px solid #2b742d;
+  padding: 10px;
+  text-align: left;
+}
+
+th{
+  background-color: #19421a;
+  color: white;
+}
+
 footer {
   text-align: center;
   padding: 20px;
