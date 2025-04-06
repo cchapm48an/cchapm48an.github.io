@@ -59,6 +59,12 @@ p {
   height: auto;
 }
 
+.image-below-intro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .content-section {
   margin-top: 20px;
   padding: 15px;

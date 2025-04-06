@@ -51,6 +51,23 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => section.classList.add('hidden'));
+  
+    // Show the selected main section
+    document.getElementById(sectionId).classList.remove('hidden');
+  
+    // Special case: show intro image only if intro is active
+    const introImage = document.getElementById('intro-image');
+    if (sectionId === 'intro') {
+      introImage.classList.remove('hidden');
+    } else {
+      introImage.classList.add('hidden');
+    }
+  }
+  
+
   function updateSummary() {
     const total = incomes.reduce((acc, val) => acc + val, 0);
     const average = incomes.length ? total / incomes.length : 0;
