@@ -52,20 +52,6 @@ p {
   font-family: sans-serif;
 }
 
-.centered-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-}
-
-.image-below-intro img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 .content-section {
   margin-top: 20px;
   padding: 15px;
@@ -75,6 +61,13 @@ p {
 
 .hidden {
   display: none;
+}
+
+.image-below-intro img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .centered-image {
@@ -192,6 +185,18 @@ p {
 th{
   background-color: #19421a;
   color: white;
+}
+
+.video-container {
+  margin-top: 50px;
+}
+
+iframe {
+  border: none; 
+}
+
+.video-description {
+  margin-top: 30px;
 }
 
 footer {
