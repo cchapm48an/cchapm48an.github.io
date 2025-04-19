@@ -1,0 +1,90 @@
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* center content vertically */
+    max-width: 90%;
+    margin: auto;
+    height: 600px; /* fixed height to prevent layout jumping */
+    position: relative;
+  }
+  
+  .slideshow-container img {
+    width: 100%;
+    height: 500px; /* fixed height for all images */
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .caption {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .gallery-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .gallery-links button {
+    padding: 10px 14px;
+    border: none;
+    background-color: #1a4a69fa;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .gallery-links button:hover {
+    background-color: #243e4e;
+  }
+  .slideshow-controls {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .slideshow-controls button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: #0d334d;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .slideshow-controls button:hover {
+    background-color: #2f6855;
+  }
+  
+  #nameBar {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+  }
+  
+  .name-letter {
+    padding: 0 5px;
+    color: cornsilk;;
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+  
+  .name-letter.active {
+    color: #2e5bbb; 
+    text-shadow:
+        0 0 3px #becf81,
+        0 0 7px #e6a46f,
+        0 0 12px #a09722,
+        0 0 18px rgba(204, 111, 104, 0.9);
+  }
