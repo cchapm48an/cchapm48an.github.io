@@ -1,90 +1,120 @@
-.slideshow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* center content vertically */
-    max-width: 90%;
-    margin: auto;
-    height: 600px; /* fixed height to prevent layout jumping */
-    position: relative;
-  }
-  
-  .slideshow-container img {
-    width: 100%;
-    height: 500px; /* fixed height for all images */
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .caption {
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .gallery-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 10px;
-  }
-  
-  .gallery-links button {
-    padding: 10px 14px;
-    border: none;
-    background-color: #1a4a69fa;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .gallery-links button:hover {
-    background-color: #243e4e;
-  }
-  .slideshow-controls {
-    text-align: center;
-    margin: 15px 0;
-  }
-  
-  .slideshow-controls button {
-    padding: 10px 15px;
-    margin: 5px;
-    font-size: 16px;
-    border: none;
-    background-color: #0d334d;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .slideshow-controls button:hover {
-    background-color: #2f6855;
-  }
-  
-  #nameBar {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 4px;
-  }
-  
-  .name-letter {
-    padding: 0 5px;
-    color: cornsilk;;
-    transition: color 0.3s, text-shadow 0.3s;
-  }
-  
-  .name-letter.active {
-    color: #2e5bbb; 
-    text-shadow:
-        0 0 3px #becf81,
-        0 0 7px #e6a46f,
-        0 0 12px #a09722,
-        0 0 18px rgba(204, 111, 104, 0.9);
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ 
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 4px solid #ccc;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s ease;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption-container {
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  color: cornsilk;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 0 0 auto;
+  width: 100px;
+}
+
+.demo {
+  opacity: 0.6;
+  border-radius: 6px;
+  border: 2px solid #999;
+  transition: 0.3s;
+}
+
+.demo:hover,
+.demo.active {
+  opacity: 1;
+  border-color: #2e5bbb;
+}
+
+
+/* Slideshow title */
+#slideshowTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: cornsilk;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Name bar styling */
+#nameBar {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Each letter */
+.name-letter {
+  padding: 0 3px;
+  color: cornsilk;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Highlight effect for active letter */
+.name-letter.active {
+  color: #2e5bbb;
+  text-shadow:
+    0 0 4px #fefcc9,
+    0 0 11px #d4aa00,
+    0 0 19px #d4aa00,
+    0 0 40px #ff9900;
+}
