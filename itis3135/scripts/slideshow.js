@@ -22,21 +22,15 @@ function showSlides(n) {
   }
 
   for (let i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
+    dots[i].classList.remove("selected");
   }
 
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("selected");
   captionText.textContent = dots[slideIndex - 1].alt;
 
   // ✅ Highlight the matching name letter
   highlightLetter(slideIndex - 1);
-}
-
-function highlightLetter(index) {
-  const nameLetters = document.querySelectorAll(".name-letter");
-  nameLetters.forEach(letter => letter.classList.remove("active"));
-  nameLetters[index % nameLetters.length]?.classList.add("active");
 }
 
 document.addEventListener("keydown", function (event) {
