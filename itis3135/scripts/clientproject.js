@@ -41,6 +41,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const averageDisplay = document.getElementById('average-income');
 
   const incomes = [];
+  
+  function updateSummary() {
+    const total = incomes.reduce((sum, value) => sum + value, 0);
+    const average = incomes.length > 0 ? total / incomes.length : 0;
+  
+    totalDisplay.textContent = `$${total.toFixed(2)}`;
+    averageDisplay.textContent = `$${average.toFixed(2)}`;
+  }  
 
   if (incomeForm) {
     incomeForm.addEventListener('submit', (e) => {
@@ -65,13 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
         updateSummary();
       }
     });
-    function updateSummary() {
-      const total = incomes.reduce((sum, value) => sum + value, 0);
-      const average = incomes.length > 0 ? total / incomes.length : 0;
-    
-      totalDisplay.textContent = `$${total.toFixed(2)}`;
-      averageDisplay.textContent = `$${average.toFixed(2)}`;
-    }    
+
   }
 
   // Handle expense form
