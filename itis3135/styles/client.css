@@ -42,6 +42,14 @@ nav ul li a:hover, .subnav a:hover {
   background-color: #286a7a;
 }
 
+.nav-label {
+  padding: 10px 15px;
+  color: white;
+  background-color: #044b04;
+  border-radius: 5px;
+  display: block;
+}
+
 main {
   padding: 20px;
   font-family: sans-serif;
