@@ -10,6 +10,7 @@
   <header>
     <h1>Creating a Budget</h1>
     <p>Learn how to manage your money wisely!</p>
+    <p id="current-time"></p>
   </header>
 
   <!-- Main Navigation -->
@@ -85,7 +86,12 @@
       <ul>
         <li>Take advantage of your employer's 401(k) plan by contributing enough to maximize the employer match.</li>
         <li>Save an additional 6% of your income in a savings account designated for emergencies or budgeted expenses.</li>
-      </ul>
+        <li>Your savings strategy should include a 3-month emergency fund. To determine your emergency fund, enter your annual salary below:</li>
+    </ul>
+
+    <label for="salary">Annual Salary: </label>
+    <input type="number" id="salary" name="salary" placeholder="Enter your annual salary" oninput="calculateEmergencyFund()">
+    <p>Your emergency fund should be: $<span id="emergencyFund">0</span></p>
     </section>
 
     <section id="income" class="content-section hidden">
@@ -124,18 +130,16 @@
               <td><strong>Total</strong></td>
               <td id="total-income" class="summary-cell">$0.00</td>
             </tr>
-            <tr>
-              <td><strong>Average</strong></td>
-              <td id="average-income" class="summary-cell">$0.00</td>
-            </tr>
           </tfoot>
         </table>
       </div>  
     </section>    
+
   </main>
 
   <footer>
     <p>Personal Budgeting Adivsor © 2025</p>
+    <p id="current-date"></p>
   </footer>
 
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>

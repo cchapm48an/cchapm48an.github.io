@@ -19,68 +19,80 @@ function showSection(id) {
   }
 }
 
-function updateSummary() {
-  const total = incomes.reduce((acc, val) => acc + val, 0);
-  const average = incomes.length ? total / incomes.length : 0;
-
-  totalDisplay.textContent = `$${total.toFixed(2)}`;
-  averageDisplay.textContent = `$${average.toFixed(2)}`;
+function calculateEmergencyFund() {
+  const salary = document.getElementById('salary').value;
+  const emergencyFund = (salary / 12) * 3;
+  document.getElementById('emergencyFund').innerText = emergencyFund.toFixed(2);
 }
 
-// Run everything after DOM loads
+// Run after DOM loads
 window.addEventListener('DOMContentLoaded', () => {
-  // Show the intro section by default
-  showSection('intro');
+  showSection('intro'); // Show intro first
 
-  // Handle income form
+  // === Income Tracker Section ===
   const incomeForm = document.getElementById('income-form');
   const sourceInput = document.getElementById('income-source');
   const incomeAmountInput = document.getElementById('income-amount');
-  const incomeList = document.getElementById('income-list');
+  const incomeTableList = document.getElementById('income-list'); // Different ID
   const totalDisplay = document.getElementById('total-income');
-  const averageDisplay = document.getElementById('average-income');
-
   const incomes = [];
-  
-  function updateSummary() {
+
+  function updateIncomeSummary() {
     const total = incomes.reduce((sum, value) => sum + value, 0);
-    const average = incomes.length > 0 ? total / incomes.length : 0;
-  
+
     totalDisplay.textContent = `$${total.toFixed(2)}`;
-    averageDisplay.textContent = `$${average.toFixed(2)}`;
-  }  
+  }
 
   if (incomeForm) {
     incomeForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
       const source = sourceInput.value.trim();
       const amount = parseFloat(incomeAmountInput.value);
 
       if (source && !isNaN(amount)) {
         incomes.push(amount);
+
         const row = document.createElement('tr');
+        row.innerHTML = `<td>${source}</td><td>$${amount.toFixed(2)}</td>`;
+        incomeTableList.appendChild(row);
 
-        row.innerHTML = `
-          <td>${source}</td>
-          <td>$${amount.toFixed(2)}</td>
-        `;
-
-        incomeList.appendChild(row);
         sourceInput.value = '';
         incomeAmountInput.value = '';
 
-        updateSummary();
+        updateIncomeSummary();
       }
     });
-
   }
 
-  // Handle expense form
+  // === Budget Tracker Section ===
+  document.addEventListener('DOMContentLoaded', function() {
+    const incomeList = document.getElementById('income-list');
+    const addButtons = document.querySelectorAll('.action-button.add');
+
+    function updateTotal() {
+        let total = 0;
+        const amounts = incomeList.querySelectorAll('.item-amount');
+        amounts.forEach((amount) => {
+          total += parseFloat(amount.value) || 0;
+      });      
+      document.getElementById('total-income').textContent = `$${total.toFixed(2)}`;
+    }
+
+ 
+
+
+    // Setup existing rows
+    document.querySelectorAll('#income-list tr').forEach(setupRow);
+
+    // Initial total calculation
+    updateTotal();
+});
+
+  // === Expense Tracker Section ===
   const expenseForm = document.getElementById('expense-form');
   const categoryInput = document.getElementById('category');
   const expenseAmountInput = document.getElementById('amount');
-  const expenseList = document.getElementById('expense-list');
+  const expenseList = document.getElementById('expense-list'); // <ul> list
 
   if (expenseForm) {
     expenseForm.addEventListener('submit', (e) => {
@@ -92,9 +104,30 @@ window.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.textContent = `${category}: $${amount.toFixed(2)}`;
         expenseList.appendChild(li);
+
         categoryInput.value = '';
         expenseAmountInput.value = '';
       }
     });
   }
 });
+
+  function updateDateTime() {
+    const now = new Date();
+    
+    // Set the time (for header)
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const timeString = now.toLocaleTimeString([], timeOptions);
+    document.getElementById("current-time").innerHTML = timeString;
+  
+    // Set the date (for footer)
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString([], dateOptions);
+    document.getElementById("current-date").innerHTML = dateString;
+  }
+
+  // Update right away
+  updateDateTime();
+
+  // Optional: keep time ticking every second
+  setInterval(updateDateTime, 1000);
