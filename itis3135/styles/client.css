@@ -185,88 +185,6 @@ a:hover{
   text-align: left;
 }
 
-.side-by-side {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.image-side img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.image-caption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: black;
-  margin-top: 0.5rem;
-}
-
-.table-side {
-  flex-grow: 1;
-  max-width: 700px; /* NEW: Limit table side width */
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-table th,
-table td {
-  border: 1px solid #2b742d;
-  padding: 8px;
-  text-align: left;
-}
-
-thead {
-  background-color: #e0f7e9;
-}
-
-tfoot {
-  background-color: #cbe2c4;
-  font-weight: bold;
-}
-
-#income-table tbody tr:nth-child(odd),
-#expense-table tbody tr:nth-child(odd) {
-  background-color: #399741;
-}
-
-#income-table tbody tr:nth-child(even),
-#expense-table tbody tr:nth-child(even) {
-  background-color: #28bb40;
-}
-
-#summary-table tbody tr {
-  background-color: #e0f7e9;
-}
-
-.input-field {
-  padding: 4px 6px;
- 
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.button-add {
-  border: none;
-  background-color: #007bff; /* blue for add button */
-}
-
-.button-delete {
-  border: none;
-  background-color: #dc3545; /* Red for delete button */
-}
-
 .button:hover,
 .button-add:hover,
 .button-delete:hover {
@@ -313,4 +231,3 @@ footer a:hover {
   text-decoration: underline;
   color: #1a9451; 
 }
-
