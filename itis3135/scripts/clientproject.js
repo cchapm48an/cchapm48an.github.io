@@ -20,10 +20,23 @@ function showSection(id) {
 }
 
 function calculateEmergencyFund() {
-  const salary = document.getElementById('salary').value;
-  const emergencyFund = (salary / 12) * 3;
-  document.getElementById('emergencyFund').innerText = emergencyFund.toFixed(2);
+  const salaryInput = document.getElementById('salary').value;
+  const salary = parseFloat(salaryInput);
+
+  if (!isNaN(salary)) {
+    const emergencyFund = (salary / 12) * 3;
+    const formattedFund = emergencyFund.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    document.getElementById('emergencyFund').innerText = formattedFund;
+  } else {
+    document.getElementById('emergencyFund').innerText = '0.00';
+  }
 }
+
+
 
 // Run after DOM loads
 window.addEventListener('DOMContentLoaded', () => {
