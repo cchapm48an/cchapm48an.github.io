@@ -1,4 +1,6 @@
-/* Stretch layout to full height and use flexbox to push footer to bottom */
+/* === Layout and Base Styles === */
+
+/* Full height layout using flexbox to push footer to bottom */
 html, body {
   height: 100%;
   margin: 0;
@@ -9,6 +11,8 @@ html, body {
   background-color: #83bb83;
 }
 
+/* === Header Styles === */
+
 header {
   background: #053f05;
   color: white;
@@ -16,6 +20,9 @@ header {
   text-align: center;
 }
 
+/* === Navigation Styles === */
+
+/* General nav and sub-navigation bar styling */
 nav ul, .subnav {
   list-style: none;
   padding: 15px;
@@ -25,10 +32,12 @@ nav ul, .subnav {
   justify-content: center;
 }
 
+/* Spacing between navigation items */
 nav ul li, .subnav li {
   margin: 0 10px;
 }
 
+/* Styling for nav links */
 nav ul li a, .subnav a {
   text-decoration: none;
   padding: 10px 15px;
@@ -38,32 +47,57 @@ nav ul li a, .subnav a {
   border-radius: 5px;
 }
 
+/* Hover effect for nav links */
 nav ul li a:hover, .subnav a:hover {
-  background-color: #34788a;
+  background-color: #367d91;
+  color: white;
 }
 
+/* === Main Content Area === */
+
+/* Main content padding and flex-grow */
 main {
   padding: 20px;
   font-family: sans-serif;
-  flex: 1; /* Pushes footer to bottom */
+  flex: 1; /* Allows footer to stay at bottom */
 }
 
+/* Paragraph font consistency */
 p {
   font-family: sans-serif;
-  
 }
 
+/* Section block styling */
 .content-section {
   margin-top: 20px;
   padding: 15px;
   background-color: #479147;
   border-radius: 8px;
 }
+#intro {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
 
+
+/* Class to hide elements */
 .hidden {
   display: none;
 }
 
+/* === Image Styling === */
+
+/* Responsive image styling below intro section */
+#intro-image {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0 ;
+}
+/* Styles the intro image to be fully responsive and centered below the intro text */
 .image-below-intro img {
   max-width: 100%;
   height: auto;
@@ -71,6 +105,7 @@ p {
   margin: 0 auto;
 }
 
+/* Center image and apply padding/margin */
 .centered-image {
   display: flex;
   flex-direction: column;
@@ -82,14 +117,19 @@ p {
   border-radius: 8px;
 }
 
+/* === Link Styling === */
+
 a {
   color: #0b4725;
 }
 
-a:hover{
+a:hover {
   color: #165d6e;
 }
 
+/* === Budget Chart and Forms === */
+
+/* Container for budget chart */
 .budget-chart {
   display: flex;
   flex-direction: column;
@@ -97,6 +137,7 @@ a:hover{
   margin-bottom: 20px;
 }
 
+/* Styling for expense form */
 #expense-form {
   display: flex;
   flex-direction: column;
@@ -105,13 +146,16 @@ a:hover{
   margin: 0 auto;
 }
 
-/* Income Form Styles */
+/* === Income Form Section === */
+
+/* Wrapper container for income form */
 #income-form-container {
   width: 100%;
   max-width: 700px;
   margin: 20px auto;
 }
 
+/* Header row of income form */
 .income-header {
   background-color: #19421a;
   color: white;
@@ -121,12 +165,14 @@ a:hover{
   border-radius: 4px 4px 0 0;
 }
 
+/* Input row for income form */
 .income-input-row {
   background-color: #c7d1c9;
   padding: 10px;
   border-radius: 0 0 4px 4px;
 }
 
+/* Layout for income form inputs */
 #income-form {
   display: flex;
   gap: 10px;
@@ -134,6 +180,7 @@ a:hover{
   justify-content: space-between;
 }
 
+/* Text and number inputs for income form */
 #income-form input[type="text"],
 #income-form input[type="number"] {
   padding: 5px;
@@ -141,6 +188,7 @@ a:hover{
   box-sizing: border-box;
 }
 
+/* Submit button styling for income form */
 #income-form button[type="submit"] {
   padding: 5px 10px;
   background-color: #0e7210;
@@ -149,14 +197,16 @@ a:hover{
   cursor: pointer;
 }
 
-/* Income table styles */
+/* === Income Table Styling === */
+
+/* Basic table layout */
 #income-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
 }
 
-
+/* Table cell styling */
 #income-table th,
 #income-table td {
   border: 1px solid #2b742d;
@@ -164,7 +214,7 @@ a:hover{
   text-align: left;
 }
 
-/* Alternating row colors */
+/* Alternating row colors for readability */
 #income-table tbody tr:nth-child(odd) td {
   background-color: #3d7224; 
 }
@@ -173,17 +223,13 @@ a:hover{
   background-color: white; 
 }
 
+/* Styling for table footer row */
 #income-table tfoot td {
   font-weight: bold;
   background-color: #cbe2c4;
 }
 
-#income-table th,
-#income-table td {
-  border: 1px solid #2b742d;
-  padding: 10px;
-  text-align: left;
-}
+/* === Button Hover Effects === */
 
 .button:hover,
 .button-add:hover,
@@ -191,29 +237,41 @@ a:hover{
   opacity: 0.8;
 }
 
+/* === Financial Totals Styling === */
 
-#total-income, #total-expense, #budget-surplus {
+#total-income, 
+#total-expense, 
+#budget-surplus {
   font-weight: bold;
   color: #28a745;
 }
 
-th{
+/* Table header styling */
+th {
   background-color: #19421a;
   color: white;
 }
 
+/* === Video Section Styling === */
+
+/* Container for embedding videos */
 .video-container {
   margin-top: 50px;
 }
 
+/* Remove default iframe border */
 iframe {
   border: none; 
 }
 
+/* Spacing for video description */
 .video-description {
   margin-top: 30px;
 }
 
+/* === Footer Styling === */
+
+/* Main footer container */
 footer {
   text-align: center;
   padding: 20px;
@@ -222,11 +280,13 @@ footer {
   margin-top: 30px;
 }
 
+/* Footer links */
 footer a {
   color: #b9e989; 
   text-decoration: none;
 }
 
+/* Footer link hover effect */
 footer a:hover {
   text-decoration: underline;
   color: #1a9451; 

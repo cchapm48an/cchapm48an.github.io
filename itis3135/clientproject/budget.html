@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Creating a Budget - Budgeting Basics</title>
+
+  <!-- Link to external stylesheet for styling -->
   <link rel="stylesheet" href="../styles/client.css">
   <script defer src="../scripts/clientproject.js"></script>
 </head>
@@ -10,10 +12,11 @@
   <header>
     <h1>Creating a Budget</h1>
     <p>Learn how to manage your money wisely!</p>
+    <!-- Placeholder for dynamic time display -->
     <p id="current-time"></p>
   </header>
 
-  <!-- Main Navigation -->
+  <!-- Main navigation bar for site-wide navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -26,36 +29,41 @@
     </ul>
   </nav>
 
-  <!-- Sub-navigation for budget sections -->
+  <!-- Sub-navigation for navigating specific budget topics -->
   <ul class="subnav">
     <li><a href="#" onclick="showSection('tracking')">Tracking Expenses</a></li>
     <li><a href="#" onclick="showSection('saving')">Saving Strategies</a></li>
     <li><a href="#" onclick="showSection('income')">Identify All Income Sources</a></li>
   </ul>
 
-  <!-- Content Sections (Hidden by default) -->
+  <!-- Main content area containing collapsible sections -->
   <main>
+
+    <!-- Introduction section with general budgeting overview -->
     <section id="intro" class="content-section">
       <h2>Introduction to Budgeting</h2>
       <p>
-        Budgeting is a plan to help you identify where your money is spent, how to create savings, and how to reduce debt.      </p>
+        Budgeting is a plan to help you identify where your money is spent, how to create savings, and how to reduce debt.
+      </p>
     </section>
 
-    <!-- fix -->
+    <!-- Supporting image below intro (hidden by default) -->
     <div id="intro-image" class="content-section hidden image-below-intro">
-      <img src="images/personal-budgeting-tips.png" alt="Personal Budgeting Tips Graphic">
+      <img src="images/personal-budgeting-tips.png" alt="Pen and paper with handwritten budget notes">
     </div>    
 
+    <!-- Section for tracking expenses by category -->
     <section id="tracking" class="content-section hidden">
       <h2>Tracking Expenses</h2>
       <p>Select a category and enter your expense amount. These categories are based on common budgeting guidelines.</p>
-      
+
+      <!-- Pie chart image showing budgeting guidelines -->
       <div class="centered-image">
         <img src="images/piechart_tracking.JPG" alt="Budget breakdown pie chart">
         <p class="image-caption">Follow this guide when categorizing your expenses.</p>
       </div>
-      
 
+      <!-- Expense entry form -->
       <form id="expense-form">
         <label for="category">Category:</label>
         <select id="category" required>
@@ -70,53 +78,62 @@
           <option value="Utilities">Utilities (5–10%)</option>
           <option value="Giving">Giving (1–5%)</option>
         </select>
-    
+
         <label for="amount">Amount ($):</label>
         <input type="number" id="amount" required>
-    
+
         <button type="submit">Add Expense</button>
       </form>
-    
+
+      <!-- Dynamic list of added expenses -->
       <h3>Expense List</h3>
       <ul id="expense-list"></ul>
     </section>
 
+    <!-- Section offering advice and tools for saving -->
     <section id="saving" class="content-section hidden">
       <h2>Saving Strategies</h2>
       <ul>
         <li>Take advantage of your employer's 401(k) plan by contributing enough to maximize the employer match.</li>
         <li>Save an additional 6% of your income in a savings account designated for emergencies or budgeted expenses.</li>
         <li>Your savings strategy should include a 3-month emergency fund. To determine your emergency fund, enter your annual salary below:</li>
-    </ul>
+      </ul>
 
-    <label for="salary">Annual Salary: </label>
-    <input type="number" id="salary" name="salary" placeholder="Enter your annual salary" oninput="calculateEmergencyFund()">
-    <p>Your emergency fund should be: $<span id="emergencyFund">0</span></p>
-  </section>
+      <!-- Input for calculating emergency fund -->
+      <label for="salary">Annual Salary: </label>
+      <input type="number" id="salary" name="salary" placeholder="Enter your annual salary" oninput="calculateEmergencyFund()">
+      <p>Your emergency fund should be: $<span id="emergencyFund">0</span></p>
+    </section>
 
+    <!-- Section to input and visualize all sources of income -->
     <section id="income" class="content-section hidden">
       <h2>Identify All Income Sources</h2>
-      <p>To accurately define all your income sources, begin by reviewing your regular and irregular earnings. This includes full-time or part-time wages, freelance work, side gigs, government benefits, child support, rental income, and any other incoming funds. Refer to the green income table in the spreadsheet below as a guide—it breaks down typical categories and helps you avoid missing smaller, less obvious income streams. Being thorough here ensures your budget reflects your true financial situation.</p>
-    
+      <p>
+        To accurately define all your income sources, begin by reviewing your regular and irregular earnings...
+      </p>
+
+      <!-- Reference image showing income categories -->
       <div class="centered-image">
         <img src="images/Personal_Budget_Spreadsheet.png" alt="income breakdown spreadsheet">
         <p class="image-caption">Follow this guide when categorizing your income (green table).</p>
       </div>
 
+      <!-- Income form and table display -->
       <div id="income-form-container">
         <div class="income-header">INCOME</div>
         <div class="income-input-row">
           <form id="income-form">
             <label for="income-source">Source:</label>
             <input type="text" id="income-source" required>
-      
+
             <label for="income-amount">Amount ($):</label>
             <input type="number" id="income-amount" required>
-      
+
             <button type="submit">Add Source</button>
           </form>
         </div>
-      
+
+        <!-- Table showing list of income sources and totals -->
         <table id="income-table">
           <thead>
             <tr>
@@ -137,6 +154,7 @@
 
   </main>
 
+  <!-- Page footer with date, credits, and external certifications -->
   <footer>
     <p id="current-date"></p>
     <p>Personal Budgeting Advisor — Built by <a href="https://calmingcheetah.com/">Calming Cheetah Enterprize</a></p>
@@ -150,6 +168,8 @@
     </p>
   </footer>
 
+  <!-- External script for page analytics or accessibility -->
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
